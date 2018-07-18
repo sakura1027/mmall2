@@ -20,6 +20,7 @@
 商品管理，按商品id查询，修改上下架
 
 **数据表结构设计**
+
 **1. 用户表**
 **主键：id，唯一索引：username**
 
@@ -40,6 +41,7 @@
     ) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
 
 **2. 分类表**
+
 **主键：id**
 
     DROP TABLE IF EXISTS `mmall_category`;
@@ -55,6 +57,7 @@
     ) ENGINE=InnoDB AUTO_INCREMENT=100032 DEFAULT CHARSET=utf8;
     
 **3. 产品表**
+
 **主键：id**
 
     DROP TABLE IF EXISTS `mmall_product`;
@@ -75,6 +78,7 @@
     ) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8;
     
 **4. 购物车表**
+
 **主键：id，单索引：user_id**
 
     DROP TABLE IF EXISTS `mmall_cart`;
@@ -91,6 +95,7 @@
     ) ENGINE=InnoDB AUTO_INCREMENT=146 DEFAULT CHARSET=utf8;
     
 **5. 支付信息表**
+
 **主键：id**
 
     DROP TABLE IF EXISTS `mmall_pay_info`;
@@ -107,6 +112,7 @@
     ) ENGINE=InnoDB AUTO_INCREMENT=61 DEFAULT CHARSET=utf8;
 
 **6. 订单表**
+
 **主键：id，唯一索引：order_no**
 
     DROP TABLE IF EXISTS `mmall_order`;
@@ -130,6 +136,7 @@
     ) ENGINE=InnoDB AUTO_INCREMENT=118 DEFAULT CHARSET=utf8;
 
 **7. 订单明细表**
+
 **主键：id，单索引：order_no，组合索引：user_id order_no**
 
     DROP TABLE IF EXISTS `mmall_order_item`;
@@ -151,6 +158,7 @@
     ) ENGINE=InnoDB AUTO_INCREMENT=135 DEFAULT CHARSET=utf8;
     
 **8. 收货地址表**
+
 **主键：id**
 
     DROP TABLE IF EXISTS `mmall_shipping`;
@@ -171,10 +179,17 @@
     ) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8;
 
 **各模块功能接口**
+
 1.用户模块：登录、用户名验证、注册、忘记密码、提交问题答案、重置密码、获取用户信息、更新用户信息和退出登录
+
 2.分类管理模块：获取节点、增加节点、修改名字、获取分类id和递归子节点id
+
 3.商品模块：前台包括产品搜索、动态排序列表和商品详情，后台包括商品列表、商品搜索、图片上传、富文本上传、商品详情、商品上下架、增加商品和更新商品
+
 4.购物车模块：加入商品、更新商品数、查询商品数、移除商品、单选/取消、全选/取消和购物车列表
+
 5.收货地址模块：添加地址、删除地址、更新地址、地址列表、地址分页和地址详情
+
 6.支付模块：支付宝沙箱、支付宝集成、支付回调和查询支付状态
+
 7.订单模块：前台包括创建订单、商品信息、订单列表、订单详情和取消订单，后台包括订单列表、订单搜索、订单详情和订单发货
